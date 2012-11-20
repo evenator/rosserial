@@ -320,7 +320,7 @@ namespace ros {
             ti.topic_id = receivers[i]->id_;
             ti.topic_name = (char *) receivers[i]->topic_;
             ti.message_type = (char *) receivers[i]->getMsgType();
-            no_.publish( TopicInfo::ID_SUBSCRIBER, &ti );
+            no_.publish( receivers[i]->_getType(), &ti );
           }
         }
       }
